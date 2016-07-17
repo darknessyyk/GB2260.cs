@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A93EE75A-A71A-4B5C-8706-15B27F32DEA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GB2260</RootNamespace>
+    <AssemblyName>GB2260</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GB2260.cs" />
+    <Compile Include="Division.cs" />
+    <Compile Include="InvalidCodeException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="resources\GB2260\scripts\parse.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\GB2260\200212.tsv" />
+    <None Include="resources\GB2260\200712.tsv" />
+    <None Include="resources\GB2260\contrib\hongkong-201512.tsv" />
+    <None Include="resources\GB2260\contrib\macao-201512.tsv" />
+    <None Include="resources\GB2260\mca\201501.tsv" />
+    <None Include="resources\GB2260\mca\201502.tsv" />
+    <None Include="resources\GB2260\mca\201503.tsv" />
+    <None Include="resources\GB2260\mca\201504.tsv" />
+    <None Include="resources\GB2260\mca\201505.tsv" />
+    <None Include="resources\GB2260\mca\201506.tsv" />
+    <None Include="resources\GB2260\mca\201507.tsv" />
+    <None Include="resources\GB2260\mca\201508.tsv" />
+    <None Include="resources\GB2260\mca\201509.tsv" />
+    <None Include="resources\GB2260\mca\201510.tsv" />
+    <None Include="resources\GB2260\mca\201511.tsv" />
+    <None Include="resources\GB2260\mca\201512.tsv" />
+    <None Include="resources\GB2260\mca\201601.tsv" />
+    <None Include="resources\GB2260\mca\201602.tsv" />
+    <None Include="resources\GB2260\mca\201603.tsv" />
+    <None Include="resources\GB2260\mca\201604.tsv" />
+    <None Include="resources\GB2260\mca\201605.tsv" />
+    <None Include="resources\GB2260\README.md" />
+    <None Include="resources\GB2260\revisions.json" />
+    <None Include="resources\GB2260\scripts\compare.sh" />
+    <None Include="resources\GB2260\sources.tsv" />
+    <None Include="resources\GB2260\spec.md" />
+    <None Include="resources\GB2260\stats\200212.tsv" />
+    <None Include="resources\GB2260\stats\200306.tsv" />
+    <None Include="resources\GB2260\stats\200312.tsv" />
+    <None Include="resources\GB2260\stats\200403.tsv" />
+    <None Include="resources\GB2260\stats\200409.tsv" />
+    <None Include="resources\GB2260\stats\200412.tsv" />
+    <None Include="resources\GB2260\stats\200506.tsv" />
+    <None Include="resources\GB2260\stats\200512.tsv" />
+    <None Include="resources\GB2260\stats\200612.tsv" />
+    <None Include="resources\GB2260\stats\200712.tsv" />
+    <None Include="resources\GB2260\stats\200812.tsv" />
+    <None Include="resources\GB2260\stats\200912.tsv" />
+    <None Include="resources\GB2260\stats\201010.tsv" />
+    <None Include="resources\GB2260\stats\201110.tsv" />
+    <None Include="resources\GB2260\stats\201210.tsv" />
+    <None Include="resources\GB2260\stats\201308.tsv" />
+    <None Include="resources\GB2260\stats\201410.tsv" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
