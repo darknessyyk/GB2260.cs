@@ -1,0 +1,3 @@
+[submodule "GB2260.Tests/resources/GB2260"]
+	path = GB2260.Tests/resources/GB2260
+	url = https://github.com/cn/GB2260
