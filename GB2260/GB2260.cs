@@ -36,11 +36,11 @@ namespace GB2260
             if (rvs != null) return;
             try
             {
-                var path = Path.Combine(Assembly.GetAssembly(typeof(GB2260)).Location, @"..\..\..\..\GB2260");
+                var path = Path.Combine(Assembly.GetExecutingAssembly().Location, @"..\..\..\");
                 var revisionContent = File.ReadAllText(string.Format(@"{0}\resources\GB2260\revisions.json", path));
                 rvs = new JavaScriptSerializer().Deserialize<Revisions>(revisionContent);
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 throw new IOException("Error in loading revision data");
             }
@@ -49,7 +49,7 @@ namespace GB2260
         {
             try
             {
-                var path = Path.Combine(Assembly.GetAssembly(typeof(GB2260)).Location, @"..\..\..\..\GB2260");
+                var path = Path.Combine(Assembly.GetExecutingAssembly().Location, @"..\..\..\");
 
                 if (!AvailableRevisions.Contains(revision)) throw new IOException("Error in loading revision data");
 
@@ -65,7 +65,7 @@ namespace GB2260
                         Provinces.Add(new Division(code, name, revision));
                 });
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 throw new IOException("Error in loading division data");
             }

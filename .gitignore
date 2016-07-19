@@ -3,3 +3,5 @@
 **/Debug/
 TestResults/
 .vs/
+**/*.nu*
+GB2260/resources
